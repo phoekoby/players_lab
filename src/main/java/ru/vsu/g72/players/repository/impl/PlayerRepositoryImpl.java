@@ -98,7 +98,7 @@ public class PlayerRepositoryImpl implements PlayerRepository {
             preparedStatement.setLong(1, id);
             try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
-                    player = new Player();
+                    player = Player.builder().build();
                     player.setId(resultSet.getLong("id"));
                     player.setNickname(resultSet.getString("nickname"));
                 }
@@ -117,9 +117,12 @@ public class PlayerRepositoryImpl implements PlayerRepository {
         try (Statement statement = dbConnection.createStatement()) {
             try (ResultSet resultSet = statement.executeQuery(queryGetAllPlayers)) {
                 while (resultSet.next()) {
-                    Player player = new Player();
+                    Player player = Player.builder().build();
                     player.setId(resultSet.getLong("id"));
                     player.setNickname(resultSet.getString("nickname"));
+                    player.setItems(itemRepository.findAllItemsWherePlayerIs(player));
+                    player.setProgresses(progressRepository.findAllProgressesWherePlayerIs(player));
+                    player.setCurrencies(currencyRepository.findAllCurrenciesWherePlayerIs(player));
                     players.add(player);
                 }
             }

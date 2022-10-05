@@ -5,6 +5,8 @@ import jakarta.annotation.PostConstruct;
 import jakarta.inject.Inject;
 import lombok.extern.slf4j.Slf4j;
 import ru.vsu.g72.players.domain.Player;
+import ru.vsu.g72.players.dto.PlayerDTO;
+import ru.vsu.g72.players.mapper.PlayerMapper;
 import ru.vsu.g72.players.repository.PlayerRepository;
 
 import javax.enterprise.context.ApplicationScoped;
@@ -24,26 +26,30 @@ public class PlayerService {
 
     private final PlayerRepository playerRepository;
 
+    private final PlayerMapper playerMapper;
+
     @Inject
-    public PlayerService(PlayerRepository playerRepository) {
+    public PlayerService(PlayerRepository playerRepository, PlayerMapper playerMapper) {
         this.playerRepository = playerRepository;
+        this.playerMapper = playerMapper;
     }
 
-    private Map<Long, Player> cache;
+    private Map<Long, PlayerDTO> cache;
 
 
     @PostConstruct
     public void upload() {
         try {
-            List<Player> players = parseJsonFile();
-            players = playerRepository.saveAll(players);
-            log.info("Players was successful uploaded {}", players);
-            cache = playerRepository.getAll()
+//            List<Player> players = parseJsonFile();
+//            players = playerRepository.saveAll(players);
+//            log.info("Players was successful uploaded {}", players);
+            cache = playerMapper.toDto(playerRepository.getAll())
                     .stream()
-                    .collect(Collectors.toMap(Player::getId, Function.identity()));
+                    .collect(Collectors.toMap(PlayerDTO::getId, Function.identity()));
             log.info("Players was successful load to cache map {}", cache);
         } catch (Exception e) {
-            log.error(e.getMessage());
+            log.error(e.toString());
+            throw new RuntimeException(e);
         }
     }
 

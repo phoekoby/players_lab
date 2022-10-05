@@ -99,7 +99,7 @@ public class ProgressRepositoryImpl implements ProgressRepository {
         progress.setScore(resultSet.getInt("score"));
         progress.setMaxScore(resultSet.getInt("max_score"));
         progress.setResourceId(resultSet.getLong("resourceid"));
-        Player player = new Player();
+        Player player = Player.builder().build();
         player.setId(resultSet.getLong("player_id"));
         player.setNickname(resultSet.getString("nickname"));
         progress.setPlayerId(player);

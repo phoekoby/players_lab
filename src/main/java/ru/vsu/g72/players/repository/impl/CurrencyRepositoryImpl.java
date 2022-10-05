@@ -73,12 +73,12 @@ public class CurrencyRepositoryImpl implements CurrencyRepository {
     }
 
     private Currency createNewCurrency(ResultSet resultSet) throws SQLException {
-        Currency currency = new Currency();
+        Currency currency = Currency.builder().build();
         currency.setId(resultSet.getLong("id"));
         currency.setName(resultSet.getString("name"));
         currency.setCount(resultSet.getInt("count"));
         currency.setResourceId(resultSet.getLong("resourceid"));
-        Player player = new Player();
+        Player player = Player.builder().build();
         player.setId(resultSet.getLong("player_id"));
         player.setNickname(resultSet.getString("nickname"));
         currency.setPlayerId(player);

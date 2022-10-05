@@ -98,7 +98,7 @@ public class ItemRepositoryImpl implements ItemRepository {
         item.setCount(resultSet.getInt("count"));
         item.setLevel(resultSet.getInt("level"));
         item.setResourceId(resultSet.getLong("resourceid"));
-        Player player = new Player();
+        Player player = Player.builder().build();
         player.setId(resultSet.getLong("player_id"));
         player.setNickname(resultSet.getString("nickname"));
         item.setPlayerId(player);
