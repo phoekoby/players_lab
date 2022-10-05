@@ -7,10 +7,7 @@ import ru.vsu.g72.players.repository.DatabaseConnection;
 import ru.vsu.g72.players.repository.ProgressRepository;
 
 import javax.inject.Named;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -112,9 +109,9 @@ public class ProgressRepositoryImpl implements ProgressRepository {
     @Override
     public List<Progress> getAll() {
         List<Progress> progresses = new ArrayList<>();
-        String getAllItems = "SELECT * FROM progress LEFT JOIN player p on p.id = progress.player_id";
-        try (PreparedStatement preparedStatement = dbConnection.prepareStatement(getAllItems)) {
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        String getAllProgresses = "SELECT * FROM progress LEFT JOIN player p on p.id = progress.player_id";
+        try (Statement statement = dbConnection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(getAllProgresses)) {
                 while (resultSet.next()) {
                     progresses.add(createNewProgress(resultSet));
                 }

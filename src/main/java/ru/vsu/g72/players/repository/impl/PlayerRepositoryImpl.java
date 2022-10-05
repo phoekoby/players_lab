@@ -14,10 +14,7 @@ import ru.vsu.g72.players.repository.*;
 
 import javax.enterprise.context.ApplicationScoped;
 import javax.inject.Named;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -117,8 +114,8 @@ public class PlayerRepositoryImpl implements PlayerRepository {
     public List<Player> getAll() {
         List<Player> players = new ArrayList<>();
         String queryGetAllPlayers = "SELECT * FROM PLAYER";
-        try (PreparedStatement preparedStatement = dbConnection.prepareStatement(queryGetAllPlayers)) {
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        try (Statement statement = dbConnection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(queryGetAllPlayers)) {
                 while (resultSet.next()) {
                     Player player = new Player();
                     player.setId(resultSet.getLong("id"));

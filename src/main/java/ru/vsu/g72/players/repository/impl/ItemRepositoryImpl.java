@@ -7,10 +7,7 @@ import ru.vsu.g72.players.repository.DatabaseConnection;
 import ru.vsu.g72.players.repository.ItemRepository;
 
 import javax.inject.Named;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -112,8 +109,8 @@ public class ItemRepositoryImpl implements ItemRepository {
     public List<Item> getAll() {
         List<Item> items = new ArrayList<>();
         String getAllItems = "SELECT * FROM item i LEFT JOIN player p on p.id = i.player_id";
-        try (PreparedStatement preparedStatement = dbConnection.prepareStatement(getAllItems)) {
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        try (Statement statement = dbConnection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(getAllItems)) {
                 while (resultSet.next()) {
                     items.add(createItem(resultSet));
                 }

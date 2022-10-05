@@ -8,10 +8,7 @@ import ru.vsu.g72.players.repository.CurrencyRepository;
 import ru.vsu.g72.players.repository.DatabaseConnection;
 
 import javax.inject.Named;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -112,9 +109,9 @@ public class CurrencyRepositoryImpl implements CurrencyRepository {
     @Override
     public List<Currency> getAll() {
         List<Currency> currencies = new ArrayList<>();
-        String getAllItems = "SELECT * FROM currency LEFT JOIN player p on p.id = currency.player_id";
-        try (PreparedStatement preparedStatement = dbConnection.prepareStatement(getAllItems)) {
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+        String getAllCurrencies = "SELECT * FROM currency LEFT JOIN player p on p.id = currency.player_id";
+        try (Statement statement = dbConnection.createStatement()) {
+            try (ResultSet resultSet = statement.executeQuery(getAllCurrencies)) {
                 while (resultSet.next()) {
                     currencies.add(createNewCurrency(resultSet));
                 }
