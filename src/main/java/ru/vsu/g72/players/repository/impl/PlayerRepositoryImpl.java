@@ -60,9 +60,10 @@ public class PlayerRepositoryImpl implements PlayerRepository {
             if (affectedRows == 0) {
                 throw new SQLException("Creating Player failed, no rows affected.");
             }
-            player.setCurrencies(currencyRepository.saveAll(player.getCurrencies()));
-            player.setItems(itemRepository.saveAll(player.getItems()));
-            player.setProgresses(progressRepository.saveAll(player.getProgresses()));
+            cascadeSave(player);
+//            player.setCurrencies(currencyRepository.saveAll(player.getCurrencies()));
+//            player.setItems(itemRepository.saveAll(player.getItems()));
+//            player.setProgresses(progressRepository.saveAll(player.getProgresses()));
             return player;
         } catch (SQLException e) {
             log.error(e.getMessage());
