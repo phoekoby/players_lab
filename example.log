@@ -238,3 +238,9 @@ INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:
 INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1af687fe{/,null,AVAILABLE}
 INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@22bac7bc{HTTP/1.1, (http/1.1)}{localhost:8080}
 INFO main org.eclipse.jetty.server.Server - Started Server@6b3e12b5{STARTING}[11.0.12,sto=0] @76391ms
+INFO main ru.vsu.g72.players.service.PlayerService - Wait for reading all players from Database
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 17.0.5+8-LTS
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@3ecd267f{/,null,AVAILABLE}
+INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@4f25b795{HTTP/1.1, (http/1.1)}{localhost:8080}
+INFO main org.eclipse.jetty.server.Server - Started Server@30b19518{STARTING}[11.0.12,sto=0] @85814ms
