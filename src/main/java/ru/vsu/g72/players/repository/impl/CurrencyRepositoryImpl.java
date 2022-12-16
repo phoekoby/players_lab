@@ -7,7 +7,6 @@ import ru.vsu.g72.players.domain.Player;
 import ru.vsu.g72.players.repository.CurrencyRepository;
 import ru.vsu.g72.players.repository.DatabaseConnection;
 
-import javax.inject.Named;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -16,7 +15,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Slf4j
-@Named
 public class CurrencyRepositoryImpl implements CurrencyRepository {
     private final Connection dbConnection = DatabaseConnection.getDbConnection();
 
@@ -36,10 +34,19 @@ public class CurrencyRepositoryImpl implements CurrencyRepository {
             preparedStatement.setString(4, currency.getName());
             preparedStatement.setInt(5, currency.getCount());
             int affectedRows = preparedStatement.executeUpdate();
+
             if (affectedRows == 0) {
                 throw new SQLException("Creating Progress failed, no rows affected.");
             }
-            return currency;
+
+            return Currency
+                    .builder()
+                    .id(currency.getId())
+                    .name(currency.getName())
+                    .count(currency.getCount())
+                    .resourceId(currency.getResourceId())
+                    .playerId(currency.getPlayerId())
+                    .build();
         } catch (SQLException e) {
             log.error(e.getMessage());
             throw new RuntimeException(e);

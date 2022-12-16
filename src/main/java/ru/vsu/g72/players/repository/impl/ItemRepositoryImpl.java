@@ -6,7 +6,6 @@ import ru.vsu.g72.players.domain.Player;
 import ru.vsu.g72.players.repository.DatabaseConnection;
 import ru.vsu.g72.players.repository.ItemRepository;
 
-import javax.inject.Named;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,7 +14,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Slf4j
-@Named
 public class ItemRepositoryImpl implements ItemRepository {
     private final Connection dbConnection = DatabaseConnection.getDbConnection();
 
@@ -38,7 +36,14 @@ public class ItemRepositoryImpl implements ItemRepository {
             if (affectedRows == 0) {
                 throw new SQLException("Creating Item failed, no rows affected.");
             }
-            return item;
+            return Item
+                    .builder()
+                    .id(item.getId())
+                    .level(item.getLevel())
+                    .count(item.getCount())
+                    .resourceId(item.getResourceId())
+                    .playerId(item.getPlayerId())
+                    .build();
         } catch (SQLException e) {
             log.error(e.getMessage());
             throw new RuntimeException(e);

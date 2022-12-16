@@ -25,6 +25,27 @@
             <version>5.0.0</version>
             <scope>provided</scope>
         </dependency>
+                <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlet</artifactId>
+            <version>11.0.12</version>
+        </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-servlets</artifactId>
+            <version>11.0.12</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet -->
+        <dependency>
+            <groupId>org.eclipse.jetty</groupId>
+            <artifactId>jetty-server</artifactId>
+            <version>11.0.12</version>
+        </dependency>
+
+
         <dependency>
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter-api</artifactId>
@@ -50,6 +71,11 @@
             <artifactId>slf4j-api</artifactId>
             <version>2.0.3</version>
         </dependency>
+        <dependency>
+            <groupId>commons-io</groupId>
+            <artifactId>commons-io</artifactId>
+            <version>2.11.0</version>
+        </dependency>
         <!-- https://mvnrepository.com/artifact/javax.enterprise/cdi-api -->
         <dependency>
             <groupId>javax.enterprise</groupId>
@@ -59,9 +85,9 @@
         </dependency>
         <!-- https://mvnrepository.com/artifact/org.jboss.weld.se/weld-se-core -->
         <dependency>
-            <groupId>org.jboss.weld.se</groupId>
-            <artifactId>weld-se-core</artifactId>
-            <version>5.0.1.Final</version>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>5.1.0</version>
         </dependency>
 
 <!--        &lt;!&ndash; https://mvnrepository.com/artifact/com.google.inject/guice &ndash;&gt;-->

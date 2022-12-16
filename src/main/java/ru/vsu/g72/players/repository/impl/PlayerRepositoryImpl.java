@@ -1,9 +1,6 @@
 package ru.vsu.g72.players.repository.impl;
 
-import jakarta.enterprise.inject.Default;
-import jakarta.inject.Inject;
-import lombok.AllArgsConstructor;
-import lombok.NoArgsConstructor;
+import com.google.inject.Inject;
 import lombok.NonNull;
 import lombok.extern.slf4j.Slf4j;
 import ru.vsu.g72.players.domain.Currency;
@@ -12,8 +9,6 @@ import ru.vsu.g72.players.domain.Player;
 import ru.vsu.g72.players.domain.Progress;
 import ru.vsu.g72.players.repository.*;
 
-import javax.enterprise.context.ApplicationScoped;
-import javax.inject.Named;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -22,20 +17,20 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Slf4j
-@AllArgsConstructor
-@NoArgsConstructor
-@ApplicationScoped
-@Named
-@Default
 public class PlayerRepositoryImpl implements PlayerRepository {
 
     private final Connection dbConnection = DatabaseConnection.getDbConnection();
+    private final ItemRepository itemRepository;
+    private final CurrencyRepository currencyRepository;
+    private final ProgressRepository progressRepository;
+
     @Inject
-    private ItemRepository itemRepository;
-    @Inject
-    private CurrencyRepository currencyRepository;
-    @Inject
-    private ProgressRepository progressRepository;
+    public PlayerRepositoryImpl(ItemRepository itemRepository, CurrencyRepository currencyRepository, ProgressRepository progressRepository) {
+        this.itemRepository = itemRepository;
+        this.currencyRepository = currencyRepository;
+        this.progressRepository = progressRepository;
+    }
+
     @Override
     public List<Player> saveAll(Collection<Player> player) {
         if (player == null) {
@@ -60,10 +55,13 @@ public class PlayerRepositoryImpl implements PlayerRepository {
             if (affectedRows == 0) {
                 throw new SQLException("Creating Player failed, no rows affected.");
             }
+            player = Player
+                    .builder()
+                    .id(player.getId())
+                    .nickname(player.getNickname())
+                    .build();
             cascadeSave(player);
-//            player.setCurrencies(currencyRepository.saveAll(player.getCurrencies()));
-//            player.setItems(itemRepository.saveAll(player.getItems()));
-//            player.setProgresses(progressRepository.saveAll(player.getProgresses()));
+
             return player;
         } catch (SQLException e) {
             log.error(e.getMessage());

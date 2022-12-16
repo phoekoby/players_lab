@@ -1,25 +1,25 @@
 package ru.vsu.g72.players.service;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.annotation.PostConstruct;
-import jakarta.inject.Inject;
-import jakarta.inject.Named;
+import com.google.inject.Inject;
+import com.google.inject.Singleton;
 import lombok.extern.slf4j.Slf4j;
 import ru.vsu.g72.players.domain.Player;
 import ru.vsu.g72.players.dto.PlayerDTO;
 import ru.vsu.g72.players.mapper.PlayerMapper;
 import ru.vsu.g72.players.repository.PlayerRepository;
 
-import javax.enterprise.context.ApplicationScoped;
-import java.io.File;
 import java.io.IOException;
-import java.util.*;
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.Optional;
 import java.util.function.Function;
 import java.util.stream.Collectors;
 
 @Slf4j
-@Named
-@ApplicationScoped
+@Singleton
 public class PlayerService {
     private final ObjectMapper objectMapper = new ObjectMapper();
 
@@ -28,22 +28,22 @@ public class PlayerService {
 
     private final PlayerMapper playerMapper;
 
+    private Map<Long, PlayerDTO> cache;
+
     @Inject
     public PlayerService(PlayerRepository playerRepository, PlayerMapper playerMapper) {
         this.playerRepository = playerRepository;
         this.playerMapper = playerMapper;
+        upload();
     }
 
-    private Map<Long, PlayerDTO> cache;
 
-
-    @PostConstruct
     public void upload() {
         try {
 //            List<Player> players = parseJsonFile();
 //            players = playerRepository.saveAll(players);
 //            log.info("Players was successful uploaded {}", players);
-            log.debug("Wait for reading all players from Database");
+            log.info("Wait for reading all players from Database");
             cache = playerMapper
                     .toDto(playerRepository.getAll())
                     .stream()
@@ -59,7 +59,7 @@ public class PlayerService {
     public List<Player> parseJsonFile() throws IOException {
         log.info("Parse Json File");
         String jsonFileName = "players.json";
-        File jsonFile = new File(Objects.requireNonNull(getClass().getClassLoader().getResource(jsonFileName)).getFile());
+        InputStream jsonFile = Objects.requireNonNull(PlayerService.class.getClassLoader().getResourceAsStream(jsonFileName));
         return objectMapper.readValue(jsonFile, objectMapper.getTypeFactory().constructCollectionType(List.class, Player.class));
     }
 
@@ -108,5 +108,9 @@ public class PlayerService {
         PlayerDTO result =  playerMapper.toDto(player);
         cache.put(result.getId(), result);
         return result;
+    }
+
+    public Map<Long, PlayerDTO> getCache() {
+        return cache;
     }
 }

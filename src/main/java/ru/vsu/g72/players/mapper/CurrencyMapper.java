@@ -1,6 +1,6 @@
 package ru.vsu.g72.players.mapper;
 
-import jakarta.inject.Named;
+
 import ru.vsu.g72.players.domain.Currency;
 import ru.vsu.g72.players.domain.Player;
 import ru.vsu.g72.players.dto.CurrencyDTO;
@@ -8,7 +8,7 @@ import ru.vsu.g72.players.dto.CurrencyDTO;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Named
+
 public class CurrencyMapper implements EntityMapper<Currency, CurrencyDTO> {
     @Override
     public Currency toEntity(CurrencyDTO currencyDTO) {

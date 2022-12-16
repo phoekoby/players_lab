@@ -1,20 +1,18 @@
 package ru.vsu.g72.players.service;
 
-import com.fasterxml.jackson.core.PrettyPrinter;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import jakarta.inject.Inject;
-import jakarta.inject.Named;
+import com.google.inject.Inject;
 import lombok.SneakyThrows;
-import ru.vsu.g72.players.domain.Item;
 import ru.vsu.g72.players.dto.CurrencyDTO;
 import ru.vsu.g72.players.dto.ItemDTO;
 import ru.vsu.g72.players.dto.PlayerDTO;
 import ru.vsu.g72.players.dto.ProgressDTO;
 
-import java.io.IOException;
-import java.util.*;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
 
-@Named
 public class ConsoleReaderService implements ConsoleReader {
 
     private final ObjectMapper objectMapper = new ObjectMapper();

@@ -1,297 +1,240 @@
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > startInitialization (109 ms)
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > deployBeans 
-DEBUG main org.jboss.weld.Bootstrap - WELD-000108: Decorator: Decorator [class org.jboss.weld.environment.se.threading.RunnableDecorator] decorates [Runnable] with delegate type [Runnable] and delegate qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000107: Interceptor: Interceptor [class org.jboss.weld.contexts.activator.CdiRequestContextActivatorInterceptor intercepts @ActivateRequestContext]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000107: Interceptor: Interceptor [class org.jboss.weld.environment.se.contexts.activators.ActivateThreadScopeInterceptor intercepts @ActivateThreadScope]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000107: Interceptor: Interceptor [class org.jboss.weld.contexts.activator.ActivateRequestContextInterceptor intercepts @ActivateRequestContext]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Progress$ProgressBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Interceptor] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%BoundConversationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Item$ItemBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.Instance] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Decorated]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Currency$CurrencyBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%ApplicationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.mapper.ItemMapper] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.dto.PlayerDTO$PlayerDTOBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%SingletonContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.service.PlayerService] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%RequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Progress] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.InterceptionFactory] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%BoundSessionContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.mapper.ProgressMapper] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.InjectionPoint] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.mapper.CurrencyMapper] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.impl.PlayerRepositoryImpl] with qualifiers [@Default @Any]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Player] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.event.Event] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Currency] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Intercepted]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%Conversation
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.dto.ProgressDTO$ProgressDTOBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Decorator] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.impl.CurrencyRepositoryImpl] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%DependentContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.EventMetadata] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class Application] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%RequestContextController
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.impl.ProgressRepositoryImpl] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.DatabaseConnection] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.impl.ItemRepositoryImpl] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Item] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.dto.ItemDTO$ItemDTOBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Player$PlayerBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.mapper.PlayerMapper] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.service.ConsoleReaderService] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%BoundRequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.dto.CurrencyDTO$CurrencyDTOBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%DependentContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Decorated]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%BoundConversationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Intercepted]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Producer Method [String[]] with qualifiers [@Parameters @Any] declared as [[UnbackedAnnotatedMethod] @Produces @Parameters public org.jboss.weld.environment.se.beans.ParametersFactory.getArgsAsArray()]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Producer Method [List<String>] with qualifiers [@Parameters @Any] declared as [[UnbackedAnnotatedMethod] @Produces @Parameters public org.jboss.weld.environment.se.beans.ParametersFactory.getArgs()]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%BoundSessionContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%ApplicationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Decorator] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%RequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.event.Event] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.InjectionPoint] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.InterceptionFactory] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%Conversation
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%RequestContextController
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Interceptor] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.Instance] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.EventMetadata] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class org.jboss.weld.environment.se.beans.ParametersFactory] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%BoundRequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%SingletonContext
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > deployBeans > AfterBeanDiscovery 
-DEBUG main org.jboss.weld.Bootstrap - WELD-000156: AfterBeanDiscovery.addContext() called by org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f for org.jboss.weld.environment.se.contexts.ThreadContext@264f218
-DEBUG main org.jboss.weld.Bootstrap - WELD-000154: AfterBeanDiscovery.addBean() called by org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f for Configurator Bean [class org.jboss.weld.environment.se.WeldSEBeanRegistrant, types: Object, WeldContainer, qualifiers: @Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Configurator Bean [class org.jboss.weld.environment.se.WeldSEBeanRegistrant, types: Object, WeldContainer, qualifiers: @Any @Default]
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > deployBeans > AfterBeanDiscovery (7 ms)
-DEBUG main org.jboss.weld.Reflection - WELD-000601: interface jakarta.inject.Named is missing @Target. Weld will use this annotation, however this may make the application unportable.
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > deployBeans (127 ms)
-DEBUG main org.jboss.weld.Bootstrap - WELD-000100: Weld initialized. Validating beans
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > validateBeans 
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > validateBeans > AfterDeploymentValidation 
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > validateBeans > AfterDeploymentValidation (1 ms)
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > validateBeans (16 ms)
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > endInitialization 
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > endInitialization (3 ms)
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap (414 ms)
-INFO main org.jboss.weld.Bootstrap - WELD-ENV-002003: Weld SE container 23788c3f-6d2f-48af-9e91-05faf61cab22 initialized
-DEBUG main ru.vsu.g72.players.repository.DatabaseConnection - Successful connection to DB
 DEBUG main ru.vsu.g72.players.service.PlayerService - Wait for reading all players from Database
+INFO main ru.vsu.g72.players.service.PlayerService - Parse Json File
 INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
-INFO main org.jboss.weld.Bootstrap - WELD-ENV-002001: Weld SE container 23788c3f-6d2f-48af-9e91-05faf61cab22 shut down
-DEBUG main org.jboss.logging - Logging Provider: org.jboss.logging.Log4jLoggerProvider
-INFO main org.jboss.weld.Version - WELD-000900: 5.0.1 (Final)
-DEBUG main org.jboss.weld.Bootstrap - WELD-ENV-000030: Cannot load class using the ResourceLoader: org.jboss.jandex.Index
-DEBUG main org.jboss.weld.environment.deployment.discovery.DefaultBeanArchiveScanner - Resolved bean archive reference: /home/phoekoby/Documents/education/java-language/players_lab/target/classes for URL: file:/home/phoekoby/Documents/education/java-language/players_lab/target/classes/META-INF/beans.xml
-DEBUG main org.jboss.weld.Bootstrap - WELD-ENV-000032: Processing bean archive reference: /home/phoekoby/Documents/education/java-language/players_lab/target/classes
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle path: /home/phoekoby/Documents/education/java-language/players_lab/target/classes
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/META-INF
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu/g72
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu/g72/players
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu/g72/players/dto
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu/g72/players/repository
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu/g72/players/repository/impl
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu/g72/players/domain
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu/g72/players/mapper
-DEBUG main org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler - Handle directory: /home/phoekoby/Documents/education/java-language/players_lab/target/classes/ru/vsu/g72/players/service
-DEBUG main org.jboss.weld.Bootstrap - WELD-ENV-000039: Bean archive reference /home/phoekoby/Documents/education/java-language/players_lab/target/classes handled by org.jboss.weld.environment.deployment.discovery.FileSystemBeanArchiveHandler@51c8530f
-DEBUG main org.jboss.weld.Bootstrap - WELD-ENV-000024: Archive isolation enabled - creating multiple isolated bean archives if needed
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap 
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > startContainer 
-DEBUG main org.jboss.weld.Configuration - WELD-001902: Following configuration was detected and applied: {org.jboss.weld.executor.threadPoolType=COMMON, org.jboss.weld.construction.relaxed=true, org.jboss.weld.bootstrap.allowOptimizedCleanup=true}
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > startContainer > initServices 
-DEBUG main org.jboss.weld.Bootstrap - Using Weld modules: []
-DEBUG main org.jboss.weld.Bootstrap - Using instantiator: org.jboss.weld.bean.proxy.UnsafeProxyInstantiator
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > startContainer > initServices (77 ms)
-INFO main org.jboss.weld.Bootstrap - WELD-000101: Transactional services not available. Injection of @Inject UserTransaction not available. Transactional observers will be invoked synchronously.
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > startContainer > builtinContexts 
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%deployment%ApplicationContext
-DEBUG main org.jboss.weld.Reflection - WELD-000601: interface jakarta.inject.Singleton is missing @Target. Weld will use this annotation, however this may make the application unportable.
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%deployment%SingletonContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%deployment%BoundSessionContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%deployment%BoundConversationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%deployment%BoundRequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%deployment%RequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%deployment%DependentContext
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > startContainer > builtinContexts (83 ms)
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > startContainer > readDeploymentStructure 
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Built-in Bean [jakarta.enterprise.inject.spi.BeanManager] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Built-in Bean [org.jboss.weld.manager.BeanManagerImpl] with qualifiers [@Default]
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > startContainer > readDeploymentStructure (29 ms)
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > startContainer (230 ms)
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > startInitialization 
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Built-in Bean [jakarta.enterprise.inject.spi.BeanManager] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Built-in Bean [org.jboss.weld.manager.BeanManagerImpl] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Extension [class org.jboss.weld.bootstrap.WeldExtension] with qualifiers [@Default]; n/a
-DEBUG main org.jboss.weld.Bootstrap - WELD-000168: Extension bean deployed: Extension [class org.jboss.weld.bootstrap.WeldExtension] with qualifiers [@Default]; n/a
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Extension [class org.jboss.weld.environment.se.WeldSEBeanRegistrant] with qualifiers [@Default]; jar:file:/home/phoekoby/.m2/repository/org/jboss/weld/se/weld-se-core/5.0.1.Final/weld-se-core-5.0.1.Final.jar!/META-INF/services/jakarta.enterprise.inject.spi.Extension@1[org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000168: Extension bean deployed: Extension [class org.jboss.weld.environment.se.WeldSEBeanRegistrant] with qualifiers [@Default]; jar:file:/home/phoekoby/.m2/repository/org/jboss/weld/se/weld-se-core/5.0.1.Final/weld-se-core-5.0.1.Final.jar!/META-INF/services/jakarta.enterprise.inject.spi.Extension@1[org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Built-in Bean [jakarta.enterprise.inject.spi.BeanManager] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Built-in Bean [org.jboss.weld.manager.BeanManagerImpl] with qualifiers [@Default]
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > startInitialization > BeforeBeanDiscovery 
-DEBUG main org.jboss.weld.Bootstrap - WELD-000162: BeforeBeanDiscovery.addAnnotatedType() called by org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f for [BackedAnnotatedType] public @Vetoed @ApplicationScoped class org.jboss.weld.environment.se.beans.ParametersFactory
-DEBUG main org.jboss.weld.Bootstrap - WELD-000162: BeforeBeanDiscovery.addAnnotatedType() called by org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f for [BackedAnnotatedType] public @Decorator class org.jboss.weld.environment.se.threading.RunnableDecorator
-DEBUG main org.jboss.weld.Bootstrap - WELD-000162: BeforeBeanDiscovery.addAnnotatedType() called by org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f for [BackedAnnotatedType] public @Vetoed @Interceptor @ActivateThreadScope @Priority class org.jboss.weld.environment.se.contexts.activators.ActivateThreadScopeInterceptor
-DEBUG main org.jboss.weld.Bootstrap - WELD-000162: BeforeBeanDiscovery.addAnnotatedType() called by org.jboss.weld.bootstrap.WeldExtension@24569dba for [BackedAnnotatedType] public @Vetoed @Interceptor @ActivateRequestContext @Priority class org.jboss.weld.contexts.activator.ActivateRequestContextInterceptor
-DEBUG main org.jboss.weld.Bootstrap - WELD-000162: BeforeBeanDiscovery.addAnnotatedType() called by org.jboss.weld.bootstrap.WeldExtension@24569dba for [BackedAnnotatedType] public @Vetoed @Interceptor @ActivateRequestContext @Priority class org.jboss.weld.contexts.activator.CdiRequestContextActivatorInterceptor
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > startInitialization > BeforeBeanDiscovery (40 ms)
-INFO main org.jboss.weld.Bootstrap - WELD-000119: Not generating any bean definitions from ru.vsu.g72.players.HelloServlet because of underlying class loading error: Type jakarta.servlet.http.HttpServlet not found.  If this is unexpected, enable DEBUG logging to see the full error.
-DEBUG main org.jboss.weld.Bootstrap - Catching
-org.jboss.weld.resources.spi.ResourceLoadingException: java.lang.NoClassDefFoundError: jakarta/servlet/http/HttpServlet
-	at org.jboss.weld.environment.deployment.WeldResourceLoader.classForName(WeldResourceLoader.java:44)
-	at org.jboss.weld.bootstrap.AnnotatedTypeLoader.loadClass(AnnotatedTypeLoader.java:83)
-	at org.jboss.weld.bootstrap.AnnotatedTypeLoader.loadAnnotatedType(AnnotatedTypeLoader.java:63)
-	at org.jboss.weld.bootstrap.BeanDeployer.addClass(BeanDeployer.java:87)
-	at org.jboss.weld.bootstrap.ConcurrentBeanDeployer$1.doWork(ConcurrentBeanDeployer.java:55)
-	at org.jboss.weld.bootstrap.ConcurrentBeanDeployer$1.doWork(ConcurrentBeanDeployer.java:52)
-	at org.jboss.weld.executor.IterativeWorkerTaskFactory$1.call(IterativeWorkerTaskFactory.java:62)
-	at org.jboss.weld.executor.IterativeWorkerTaskFactory$1.call(IterativeWorkerTaskFactory.java:55)
-	at org.jboss.weld.executor.CommonForkJoinPoolExecutorServices.lambda$wrap$0(CommonForkJoinPoolExecutorServices.java:70)
-	at java.base/java.util.concurrent.ForkJoinTask$AdaptedInterruptibleCallable.exec(ForkJoinTask.java:1461)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:373)
-	at java.base/java.util.concurrent.ForkJoinTask.awaitDone(ForkJoinTask.java:436)
-	at java.base/java.util.concurrent.ForkJoinTask.awaitPoolInvoke(ForkJoinTask.java:1034)
-	at java.base/java.util.concurrent.ForkJoinPool.invokeAll(ForkJoinPool.java:2731)
-	at org.jboss.weld.executor.AbstractExecutorServices.invokeAllAndCheckForExceptions(AbstractExecutorServices.java:59)
-	at org.jboss.weld.executor.AbstractExecutorServices.invokeAllAndCheckForExceptions(AbstractExecutorServices.java:67)
-	at org.jboss.weld.bootstrap.ConcurrentBeanDeployer.addClasses(ConcurrentBeanDeployer.java:52)
-	at org.jboss.weld.bootstrap.BeanDeployment.createClasses(BeanDeployment.java:198)
-	at org.jboss.weld.bootstrap.WeldStartup.startInitialization(WeldStartup.java:409)
-	at org.jboss.weld.bootstrap.WeldBootstrap.startInitialization(WeldBootstrap.java:80)
-	at org.jboss.weld.environment.se.Weld.initialize(Weld.java:824)
-	at Application.main(Application.java:11)
-Caused by: java.lang.NoClassDefFoundError: jakarta/servlet/http/HttpServlet
-	at java.base/java.lang.ClassLoader.defineClass1(Native Method)
-	at java.base/java.lang.ClassLoader.defineClass(ClassLoader.java:1012)
-	at java.base/java.security.SecureClassLoader.defineClass(SecureClassLoader.java:150)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.defineClass(BuiltinClassLoader.java:862)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.findClassOnClassPathOrNull(BuiltinClassLoader.java:760)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClassOrNull(BuiltinClassLoader.java:681)
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:639)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-	at org.jboss.weld.environment.deployment.WeldResourceLoader.classForName(WeldResourceLoader.java:40)
-	... 21 more
-Caused by: java.lang.ClassNotFoundException: jakarta.servlet.http.HttpServlet
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641)
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188)
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:520)
-	... 31 more
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > startInitialization > AfterTypeDiscovery 
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > startInitialization > AfterTypeDiscovery (0 ms)
-DEBUG main org.jboss.weld.Bootstrap - WELD-000103: Enabled alternatives for Weld BeanManager for /home/phoekoby/Documents/education/java-language/players_lab/target/classes [bean count=2]: (empty collection)
-DEBUG main org.jboss.weld.Bootstrap - WELD-000104: Enabled decorator types for Weld BeanManager for /home/phoekoby/Documents/education/java-language/players_lab/target/classes [bean count=2]: (empty collection)
-DEBUG main org.jboss.weld.Bootstrap - WELD-000105: Enabled interceptor types for Weld BeanManager for /home/phoekoby/Documents/education/java-language/players_lab/target/classes [bean count=2]: 
-  - class org.jboss.weld.contexts.activator.ActivateRequestContextInterceptor,
-  - class org.jboss.weld.contexts.activator.CdiRequestContextActivatorInterceptor,
-  - class org.jboss.weld.environment.se.contexts.activators.ActivateThreadScopeInterceptor
-DEBUG main org.jboss.weld.Bootstrap - WELD-000103: Enabled alternatives for Weld BeanManager for org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses [bean count=4]: (empty collection)
-DEBUG main org.jboss.weld.Bootstrap - WELD-000104: Enabled decorator types for Weld BeanManager for org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses [bean count=4]: (empty collection)
-DEBUG main org.jboss.weld.Bootstrap - WELD-000105: Enabled interceptor types for Weld BeanManager for org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses [bean count=4]: 
-  - class org.jboss.weld.contexts.activator.ActivateRequestContextInterceptor,
-  - class org.jboss.weld.contexts.activator.CdiRequestContextActivatorInterceptor,
-  - class org.jboss.weld.environment.se.contexts.activators.ActivateThreadScopeInterceptor
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > startInitialization (111 ms)
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > deployBeans 
-DEBUG main org.jboss.weld.Bootstrap - WELD-000108: Decorator: Decorator [class org.jboss.weld.environment.se.threading.RunnableDecorator] decorates [Runnable] with delegate type [Runnable] and delegate qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000107: Interceptor: Interceptor [class org.jboss.weld.contexts.activator.ActivateRequestContextInterceptor intercepts @ActivateRequestContext]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000107: Interceptor: Interceptor [class org.jboss.weld.environment.se.contexts.activators.ActivateThreadScopeInterceptor intercepts @ActivateThreadScope]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000107: Interceptor: Interceptor [class org.jboss.weld.contexts.activator.CdiRequestContextActivatorInterceptor intercepts @ActivateRequestContext]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Currency] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.impl.ItemRepositoryImpl] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.service.ConsoleReaderService] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Item$ItemBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Interceptor] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%BoundConversationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.Instance] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.mapper.CurrencyMapper] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Decorated]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%ApplicationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.mapper.ProgressMapper] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%SingletonContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%RequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.impl.PlayerRepositoryImpl] with qualifiers [@Default @Any]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.InterceptionFactory] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.DatabaseConnection] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.mapper.PlayerMapper] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%BoundSessionContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.InjectionPoint] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.dto.CurrencyDTO$CurrencyDTOBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Progress$ProgressBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.event.Event] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Intercepted]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.impl.ProgressRepositoryImpl] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%Conversation
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.dto.PlayerDTO$PlayerDTOBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Player$PlayerBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Decorator] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.dto.ItemDTO$ItemDTOBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Item] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Player] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%DependentContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Currency$CurrencyBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.EventMetadata] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.service.PlayerService] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.repository.impl.CurrencyRepositoryImpl] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.dto.ProgressDTO$ProgressDTOBuilder] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%RequestContextController
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.mapper.ItemMapper] with qualifiers [@Default @Any @Named]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class ru.vsu.g72.players.domain.Progress] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%/home/phoekoby/Documents/education/java-language/players_lab/target/classes%BoundRequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class Application] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%DependentContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Decorated]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%BoundConversationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Intercepted]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Bean] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%BoundSessionContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%ApplicationContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Decorator] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%RequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.event.Event] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.InjectionPoint] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.InterceptionFactory] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%Conversation
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%RequestContextController
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.Interceptor] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.Instance] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Producer Method [List<String>] with qualifiers [@Parameters @Any] declared as [[UnbackedAnnotatedMethod] @Produces @Parameters public org.jboss.weld.environment.se.beans.ParametersFactory.getArgs()]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Implicit Bean [jakarta.enterprise.inject.spi.EventMetadata] with qualifiers [@Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%BoundRequestContext
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Producer Method [String[]] with qualifiers [@Parameters @Any] declared as [[UnbackedAnnotatedMethod] @Produces @Parameters public org.jboss.weld.environment.se.beans.ParametersFactory.getArgsAsArray()]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Managed Bean [class org.jboss.weld.environment.se.beans.ParametersFactory] with qualifiers [@Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: WELD%AbstractBuiltInBean%org.jboss.weld.environment.deployment.WeldDeployment.additionalClasses%SingletonContext
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > deployBeans > AfterBeanDiscovery 
-DEBUG main org.jboss.weld.Bootstrap - WELD-000156: AfterBeanDiscovery.addContext() called by org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f for org.jboss.weld.environment.se.contexts.ThreadContext@3cfdd820
-DEBUG main org.jboss.weld.Bootstrap - WELD-000154: AfterBeanDiscovery.addBean() called by org.jboss.weld.environment.se.WeldSEBeanRegistrant@f09733f for Configurator Bean [class org.jboss.weld.environment.se.WeldSEBeanRegistrant, types: Object, WeldContainer, qualifiers: @Any @Default]
-DEBUG main org.jboss.weld.Bootstrap - WELD-000106: Bean: Configurator Bean [class org.jboss.weld.environment.se.WeldSEBeanRegistrant, types: Object, WeldContainer, qualifiers: @Any @Default]
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > deployBeans > AfterBeanDiscovery (8 ms)
-DEBUG main org.jboss.weld.Reflection - WELD-000601: interface jakarta.inject.Named is missing @Target. Weld will use this annotation, however this may make the application unportable.
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > deployBeans (132 ms)
-DEBUG main org.jboss.weld.Bootstrap - WELD-000100: Weld initialized. Validating beans
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > validateBeans 
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > validateBeans > AfterDeploymentValidation 
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > validateBeans > AfterDeploymentValidation (1 ms)
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > validateBeans (13 ms)
-DEBUG main org.jboss.weld.BootstrapTracker - START bootstrap > endInitialization 
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap > endInitialization (4 ms)
-DEBUG main org.jboss.weld.BootstrapTracker -   END bootstrap (496 ms)
-INFO main org.jboss.weld.Bootstrap - WELD-ENV-002003: Weld SE container ef45b0e0-1452-4422-8ebb-4303295c6d00 initialized
-DEBUG main ru.vsu.g72.players.repository.DatabaseConnection - Successful connection to DB
-DEBUG main ru.vsu.g72.players.service.PlayerService - Wait for reading all players from Database
+INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 17.0.5+8-LTS
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@44e3a2b2{/,null,AVAILABLE}
+INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@12f9af83{HTTP/1.1, (http/1.1)}{localhost:8080}
+INFO main org.eclipse.jetty.server.Server - Started Server@687ef2e0{STARTING}[11.0.12,sto=0] @85715ms
+WARN qtp1503660218-38 org.eclipse.jetty.server.HttpChannel - /players
+java.lang.NullPointerException: Cannot invoke "java.util.Map.containsKey(Object)" because "this.cache" is null
+	at ru.vsu.g72.players.service.PlayerService.getPlayerById(PlayerService.java:70)
+	at ru.vsu.g72.players.servlets.PlayerServlet.doGet(PlayerServlet.java:33)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1380)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:933)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1077)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+WARN qtp1503660218-38 org.eclipse.jetty.server.HttpChannel - /players
+java.lang.NullPointerException: Cannot invoke "java.util.Map.containsKey(Object)" because "this.cache" is null
+	at ru.vsu.g72.players.service.PlayerService.getPlayerById(PlayerService.java:70)
+	at ru.vsu.g72.players.servlets.PlayerServlet.doGet(PlayerServlet.java:33)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:500)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1380)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:933)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1077)
+	at java.base/java.lang.Thread.run(Thread.java:833)
 INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
-INFO Thread-0 org.jboss.weld.Bootstrap - WELD-ENV-002001: Weld SE container ef45b0e0-1452-4422-8ebb-4303295c6d00 shut down
+INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 17.0.5+8-LTS
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@44040454{/,null,AVAILABLE}
+INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@40db2a24{HTTP/1.1, (http/1.1)}{localhost:8080}
+INFO main org.eclipse.jetty.server.Server - Started Server@115667d{STARTING}[11.0.12,sto=0] @100242ms
+WARN qtp24293395-28 org.eclipse.jetty.server.HttpChannel - /players
+java.lang.StringIndexOutOfBoundsException: begin -1, end 0, length 0
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4604)
+	at java.base/java.lang.String.substring(String.java:2707)
+	at java.base/java.lang.String.substring(String.java:2680)
+	at ru.vsu.g72.players.servlets.PlayerServlet.doDelete(PlayerServlet.java:65)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:526)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1380)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:933)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1077)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 17.0.5+8-LTS
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@615091b8{/,null,AVAILABLE}
+INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@740d2e78{HTTP/1.1, (http/1.1)}{localhost:8080}
+INFO main org.eclipse.jetty.server.Server - Started Server@4758820d{STARTING}[11.0.12,sto=0] @88129ms
+WARN qtp532048323-38 org.eclipse.jetty.server.HttpChannel - /players/15501
+java.lang.StringIndexOutOfBoundsException: begin -1, end 0, length 0
+	at java.base/java.lang.String.checkBoundsBeginEnd(String.java:4604)
+	at java.base/java.lang.String.substring(String.java:2707)
+	at java.base/java.lang.String.substring(String.java:2680)
+	at ru.vsu.g72.players.servlets.PlayerServlet.doDelete(PlayerServlet.java:65)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:526)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1380)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:933)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1077)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 17.0.5+8-LTS
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@4aa83f4f{/,null,AVAILABLE}
+INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@72437d8d{HTTP/1.1, (http/1.1)}{localhost:8080}
+INFO main org.eclipse.jetty.server.Server - Started Server@28ec166e{STARTING}[11.0.12,sto=0] @88247ms
+WARN qtp1647946662-38 org.eclipse.jetty.server.HttpChannel - /players/15501
+java.lang.NumberFormatException: For input string: "/15501"
+	at java.base/java.lang.NumberFormatException.forInputString(NumberFormatException.java:67)
+	at java.base/java.lang.Long.parseLong(Long.java:697)
+	at java.base/java.lang.Long.valueOf(Long.java:1163)
+	at ru.vsu.g72.players.servlets.PlayerServlet.doDelete(PlayerServlet.java:65)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:526)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1380)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:933)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1077)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+ERROR main ru.vsu.g72.players.repository.DatabaseConnection - Подсоединение по адресу 127.0.0.1:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+ERROR main ru.vsu.g72.players.repository.DatabaseConnection - Подсоединение по адресу 127.0.0.1:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+ERROR main ru.vsu.g72.players.repository.DatabaseConnection - Подсоединение по адресу 127.0.0.1:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+ERROR main ru.vsu.g72.players.repository.DatabaseConnection - Подсоединение по адресу 127.0.0.1:5432 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+ERROR main ru.vsu.g72.players.service.PlayerService - java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.dbConnection" is null
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 17.0.5+8-LTS
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@180da663{/,null,AVAILABLE}
+INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@63787180{HTTP/1.1, (http/1.1)}{localhost:8080}
+INFO main org.eclipse.jetty.server.Server - Started Server@7203c7ff{STARTING}[11.0.12,sto=0] @293579ms
+WARN qtp1676827075-38 org.eclipse.jetty.server.HttpChannel - handleException /items com.fasterxml.jackson.databind.exc.InvalidDefinitionException: Cannot construct instance of `ru.vsu.g72.players.dto.ItemDTO` (no Creators, like default constructor, exist): cannot deserialize from Object value (no delegate- or property-based Creator)
+ at [Source: (String)"
+{
+    "id": 1100205,
+    "playerId": 15501,
+    "resourceId": 466778646,
+    "count": 27,
+    "level": 92
+}"; line: 3, column: 5]
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 17.0.5+8-LTS
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@8692d67{/,null,AVAILABLE}
+INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@10cf09e8{HTTP/1.1, (http/1.1)}{localhost:8080}
+INFO main org.eclipse.jetty.server.Server - Started Server@736caf7a{STARTING}[11.0.12,sto=0] @291565ms
+WARN qtp1449605932-30 org.eclipse.jetty.server.HttpChannel - /items
+java.lang.IllegalArgumentException: Impossible save null or with null id entity
+	at ru.vsu.g72.players.repository.impl.ItemRepositoryImpl.save(ItemRepositoryImpl.java:25)
+	at ru.vsu.g72.players.repository.impl.ItemRepositoryImpl.save(ItemRepositoryImpl.java:18)
+	at ru.vsu.g72.players.service.ItemService.save(ItemService.java:28)
+	at ru.vsu.g72.players.servlets.ItemServlet.doPost(ItemServlet.java:82)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:520)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:587)
+	at org.eclipse.jetty.servlet.ServletHolder.handle(ServletHolder.java:764)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:529)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:221)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1380)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:176)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:484)
+	at org.eclipse.jetty.server.handler.ScopedHandler.nextScope(ScopedHandler.java:174)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1302)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:129)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:122)
+	at org.eclipse.jetty.server.Server.handle(Server.java:563)
+	at org.eclipse.jetty.server.HttpChannel.lambda$handle$0(HttpChannel.java:505)
+	at org.eclipse.jetty.server.HttpChannel.dispatch(HttpChannel.java:762)
+	at org.eclipse.jetty.server.HttpChannel.handle(HttpChannel.java:497)
+	at org.eclipse.jetty.server.HttpConnection.onFillable(HttpConnection.java:282)
+	at org.eclipse.jetty.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:314)
+	at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:100)
+	at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:53)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.runTask(AdaptiveExecutionStrategy.java:421)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.consumeTask(AdaptiveExecutionStrategy.java:390)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.tryProduce(AdaptiveExecutionStrategy.java:277)
+	at org.eclipse.jetty.util.thread.strategy.AdaptiveExecutionStrategy.produce(AdaptiveExecutionStrategy.java:199)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:933)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1077)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main ru.vsu.g72.players.service.PlayerService - Wait for reading all players from Database
+INFO main ru.vsu.g72.players.service.PlayerService - Wait for reading all players from Database
+INFO main ru.vsu.g72.players.service.PlayerService - Players was successful load to cache map
+INFO main org.eclipse.jetty.server.Server - jetty-11.0.12; built: 2022-09-14T02:38:00.723Z; git: d5b8c29485f5f56a14be5f20c2ccce81b93c5555; jvm 17.0.5+8-LTS
+INFO main org.eclipse.jetty.server.handler.ContextHandler - Started o.e.j.s.ServletContextHandler@1af687fe{/,null,AVAILABLE}
+INFO main org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@22bac7bc{HTTP/1.1, (http/1.1)}{localhost:8080}
+INFO main org.eclipse.jetty.server.Server - Started Server@6b3e12b5{STARTING}[11.0.12,sto=0] @76391ms

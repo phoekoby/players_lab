@@ -1,7 +1,7 @@
 package ru.vsu.g72.players.mapper;
 
-import jakarta.inject.Inject;
-import jakarta.inject.Named;
+
+import com.google.inject.Inject;
 import ru.vsu.g72.players.domain.Player;
 import ru.vsu.g72.players.dto.CurrencyDTO;
 import ru.vsu.g72.players.dto.ItemDTO;
@@ -13,7 +13,7 @@ import java.util.function.Function;
 import java.util.stream.Collectors;
 
 
-@Named
+
 public class PlayerMapper implements EntityMapper<Player, PlayerDTO> {
 
     private final ItemMapper itemMapper;

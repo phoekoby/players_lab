@@ -6,7 +6,6 @@ import ru.vsu.g72.players.domain.Progress;
 import ru.vsu.g72.players.repository.DatabaseConnection;
 import ru.vsu.g72.players.repository.ProgressRepository;
 
-import javax.inject.Named;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.Collection;
@@ -15,7 +14,6 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Slf4j
-@Named
 public class ProgressRepositoryImpl implements ProgressRepository {
     private final Connection dbConnection = DatabaseConnection.getDbConnection();
 
@@ -38,7 +36,15 @@ public class ProgressRepositoryImpl implements ProgressRepository {
             if (affectedRows == 0) {
                 throw new SQLException("Creating Progress failed, no rows affected.");
             }
-            return progress;
+
+            return Progress
+                    .builder()
+                    .id(progress.getId())
+                    .maxScore(progress.getMaxScore())
+                    .score(progress.getScore())
+                    .resourceId(progress.getResourceId())
+                    .playerId(progress.getPlayerId())
+                    .build();
         } catch (SQLException e) {
             log.error(e.getMessage());
             throw new RuntimeException(e);

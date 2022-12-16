@@ -1,6 +1,6 @@
 package ru.vsu.g72.players.mapper;
 
-import jakarta.inject.Named;
+
 import ru.vsu.g72.players.domain.Player;
 import ru.vsu.g72.players.domain.Progress;
 import ru.vsu.g72.players.dto.ProgressDTO;
@@ -8,7 +8,7 @@ import ru.vsu.g72.players.dto.ProgressDTO;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Named
+
 public class ProgressMapper implements EntityMapper<Progress, ProgressDTO> {
 
     @Override
